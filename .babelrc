@@ -1,0 +1,21 @@
+{
+    "presets": [
+        [
+            "env",
+            {
+                "targets": {
+                    "browsers": ["ie >= 11"]
+                },
+                "debug": false,
+                "useBuiltIns": true
+            }
+        ],
+        "react"
+    ],
+    "plugins": [
+        [ "transform-object-rest-spread", { "useBuiltIns": true } ],
+        "transform-class-properties",
+        "transform-runtime"
+    ],
+    "sourceMaps": "inline"
+}

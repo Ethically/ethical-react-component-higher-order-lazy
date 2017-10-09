@@ -1,0 +1,46 @@
+{
+  "name": "ethical-react-component-higher-order-lazy",
+  "version": "0.0.2",
+  "description": "React component lazy loading for the Ethical framework.",
+  "main": "./dist/cjs/index.js",
+  "module": "./dist/esm/index.js",
+  "scripts": {
+    "test": "npm run build-test && nutra --config ./nutra.config.js && npm run prepublish",
+    "test-debugger": "DEBUG=1 node --inspect-brk ./node_modules/.bin/nutra --config ./nutra.config.js",
+    "build": "npm run build-node && node transpile.js",
+    "build-node": "babel ./src --out-dir ./dist/cjs",
+    "build-test": "babel ./test/files/src --out-dir ./test/files/dist",
+    "prepublish": "npm run build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Ethically/ethical-react-component-higher-order-lazy.git"
+  },
+  "author": "m-a-r-c-e-l-i-n-o <me@marceli.no>",
+  "license": "ISC",
+  "devDependencies": {
+    "babel-cli": "^6.24.0",
+    "babel-plugin-transform-class-properties": "^6.24.1",
+    "babel-plugin-transform-object-rest-spread": "^6.23.0",
+    "babel-plugin-transform-runtime": "^6.23.0",
+    "babel-preset-env": "^1.6.0",
+    "babel-preset-react": "^6.24.1",
+    "enzyme": "^2.9.1",
+    "ethical-utility-server": "0.0.0",
+    "ethical-server-middleware-module-supplier": "0.0.1",
+    "ethical-utility-babel-directory-transpiler": "0.0.0",
+    "ethical-utility-require-browser": "0.0.0",
+    "jsdom": "^11.2.0",
+    "node-fetch": "^1.7.3",
+    "nutra": "0.0.14",
+    "nutra-jasmine-coverage-babel-preset": "0.0.10",
+    "react-dom": "^15.5.4",
+    "react-test-renderer": "^15.5.4"
+  },
+  "dependencies": {
+    "ethical-utility-is-node": "0.0.0",
+    "ethical-utility-resolve-module": "0.0.0",
+    "prop-types": "^15.5.8",
+    "react": "^15.5.4"
+  }
+}
